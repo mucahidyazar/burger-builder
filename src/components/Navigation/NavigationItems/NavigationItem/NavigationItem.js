@@ -1,9 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const navigationItem = props => (
   <li className="navigation-items__item">
-    <a
-      href={props.link}
+    <NavLink
+      exact
+      activeClassName="navigation-items__link-active"
+      to={props.link}
       className={
         props.active
           ? "navigation-items__link-active"
@@ -11,7 +14,7 @@ const navigationItem = props => (
       }
     >
       {props.children}
-    </a>
+    </NavLink>
   </li>
 );
 

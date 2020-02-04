@@ -3,14 +3,6 @@ import Auxilliary from "../../../hoc/Auxilliary/Auxilliary";
 import Backdrop from "../Backdrop/Backdrop";
 
 const Modal = props => {
-  useEffect(() => {
-    console.log("[Modal.js] React.memo and useEffect");
-  }, [props.show]);
-
-  useEffect(() => {
-    console.log("[Modal] useEffect componentDidUpdate");
-  }, []);
-
   return (
     <Auxilliary>
       <Backdrop show={props.show} clicked={props.modelClosed} />
@@ -27,4 +19,4 @@ const Modal = props => {
   );
 };
 
-export default React.memo(Modal);
+export default Modal;
